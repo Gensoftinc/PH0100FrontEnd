@@ -1,5 +1,6 @@
 package com.gensoft.ph.product.model;
 
+
 public class ProductColorSize {
 	
 	private int colorSizeId;
