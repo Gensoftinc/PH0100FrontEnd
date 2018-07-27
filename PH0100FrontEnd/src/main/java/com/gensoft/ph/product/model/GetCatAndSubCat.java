@@ -1,9 +1,10 @@
 package com.gensoft.ph.product.model;
 
+import java.util.List;
 
-public class ProductCategory {
+public class GetCatAndSubCat {
 	
-	private int catId;
+    private int catId;
 	
 	private String catName;
 	
@@ -22,6 +23,8 @@ public class ProductCategory {
 	private String string1;
 	
 	private String string2;
+	
+	List<ProductSubCategory> productSubCategory;
 
 	public int getCatId() {
 		return catId;
@@ -103,13 +106,21 @@ public class ProductCategory {
 		this.string2 = string2;
 	}
 
-	@Override
-	public String toString() {
-		return "ProductCategory [catId=" + catId + ", catName=" + catName + ", catDesc=" + catDesc + ", type=" + type
-				+ ", delStatus=" + delStatus + ", pictures=" + pictures + ", int1=" + int1 + ", int2=" + int2
-				+ ", string1=" + string1 + ", string2=" + string2 + "]";
+	public List<ProductSubCategory> getProductSubCategory() {
+		return productSubCategory;
 	}
 
+	public void setProductSubCategory(List<ProductSubCategory> productSubCategory) {
+		this.productSubCategory = productSubCategory;
+	}
+
+	@Override
+	public String toString() {
+		return "GetCatAndSubCat [catId=" + catId + ", catName=" + catName + ", catDesc=" + catDesc + ", type=" + type
+				+ ", delStatus=" + delStatus + ", pictures=" + pictures + ", int1=" + int1 + ", int2=" + int2
+				+ ", string1=" + string1 + ", string2=" + string2 + ", productSubCategory=" + productSubCategory + "]";
+	}
+	
 	
 
 }
